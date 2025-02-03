@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Projects</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        // Disable right-click, text selection, and copying
+        document.addEventListener("contextmenu", function(event) {
+            event.preventDefault();
+        });
+
+        document.addEventListener("copy", function(event) {
+            event.preventDefault();
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            // Hide the popup on page load
+            document.getElementById("image-popup").style.display = "none"; 
+
+            const images = document.querySelectorAll(".gallery img");
+            images.forEach(img => {
+                img.addEventListener("click", function() {
+                    document.getElementById("popup-img").src = this.src;
+                    document.getElementById("image-popup").style.display = "block"; // Show the popup when image is clicked
+                });
+            });
+
+            document.getElementById("close-popup").addEventListener("click", function() {
+                document.getElementById("image-popup").style.display = "none"; // Close the popup
+            });
+        });
+    </script>
+
+    <style>
+        /* General Styling */
+        body {
+            background-color: #F5F5F5;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            user-select: none; /* Disable text selection */
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: flex-start;
+            background-color: #5e9fc2;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropbtn {
+            background-color: #5e9fc2;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #5e9fc2;
+            color: white;
+            border-top: 2px solid #5e9fc2;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .social-links img {
+            width: 24px;
+            height: 24px;
+        }
+
+        h1, h2, h4 {
+            text-align: center;
+            margin: 0 0 15px;
+        }
+
+        /* Feature Projects Styling */
+        .feature-projects {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .responsive {
+            width: 22%;
+            max-width: 300px;
+            box-sizing: border-box;
+        }
+
+        @media (max-width: 900px) {
+            .responsive {
+                width: 45%;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .responsive {
+                width: 100%;
+            }
+        }
+
+        .gallery {
+            border: 1px solid #ccc;
+            margin: 10px;
+            text-align: center;
+            background: white;
+            padding: 10px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+        }
+
+        .desc {
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* Image Popup */
+        .image-popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+
+        .image-popup img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Education&Experience.html">Education & Experience</a></li>
+            <li class="dropdown">
+                <button class="dropbtn">GIS Portfolio</button>
+                <div class="dropdown-content">
+                    <a href="professional-projects.html">Professional Projects</a>
+                    <a href="academic-projects.html">Academic Projects</a>
+                    <a href="personal-projects.html">Personal Projects</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <hr class="rounded">
+
+    <!-- Image Popup -->
+    <div id="image-popup" class="image-popup">
+        <span id="close-popup" class="close-btn">&times;</span>
+        <img id="popup-img" src="" alt="Popup Image">
+    </div>
+
+    <!-- Page Content -->
+    <h1>GIS Professional Projects</h1>
+    <h4>A selection of my professional GIS projects</h4>
+
+    <h2>Feature Projects</h2>
+    <div class="feature-projects">
+        <div class="responsive">
+            <div class="gallery">
+                <img src="Maps/Choropleth1.jpg" alt="Wild Fork Choropleth">
+                <div class="desc">Customer Concentration Based on Expenditure Against Chinese Population Distribution In The GTA</div>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery">
+                <img src="Maps/THS.png" alt="THS Donor">
+                <div class="desc">THS 2023 Donor Mapping for Dashboard</div>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery">
+                <img src="Maps/DA.jpg" alt="Wild Fork DA Map">
+                <div class="desc">Dissemination Area Map of The Greater Toronto Area</div>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery">
+                <img src="GIS_Academic_Project/Single Detached Homes.jpg" alt="Single Detached Homes">
+                <div class="desc">Targeting customers from single-person to multi-person households in suburban neighborhoods.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <h3>Let's connect! Here are my socials:</h3>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/hchensa/" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn Logo">
+                LinkedIn
+            </a>
+        </div>
+        <div style="margin-top: 20px;">
+            <h3>Contact</h3>
+            <p>Located in Toronto, Canada</p>
+            <p><strong>Geographic Spatial Inquiries:</strong></p>
+            <p><a href="mailto:H14CHEN@TORONTOMU.CA" style="color: white; text-decoration: underline;">H14CHEN@TORONTOMU.CA</a></p>
+        </div>
+        <p style="margin-top: 20px;">© 2025 Henry Chen. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
