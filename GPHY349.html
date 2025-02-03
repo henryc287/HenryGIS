@@ -4,34 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-        <script>
+
+    <script>
+        // Disable right-click, text selection, and copying
         document.addEventListener("contextmenu", function(event) {
             event.preventDefault();
         });
+
         document.addEventListener("copy", function(event) {
             event.preventDefault();
         });
+
         document.addEventListener("DOMContentLoaded", function() {
+            // Hide the popup on page load
             document.getElementById("image-popup").style.display = "none"; 
+
             const images = document.querySelectorAll(".gallery img");
             images.forEach(img => {
                 img.addEventListener("click", function() {
                     document.getElementById("popup-img").src = this.src;
-                    document.getElementById("image-popup").style.display = "block"; 
+                    document.getElementById("image-popup").style.display = "block"; // Show the popup when image is clicked
                 });
             });
+
             document.getElementById("close-popup").addEventListener("click", function() {
-                document.getElementById("image-popup").style.display = "none"; 
+                document.getElementById("image-popup").style.display = "none"; // Close the popup
             });
         });
     </script>
     <title>Academic Projects</title>
     <style>
+        /* General Styling */
         body {
-            background-color: #ECF0F1;
+            background-color: #F5F5F5;
             margin: 0;
             font-family: Arial, sans-serif;
-            user-select: none; 
+            user-select: none; /* Disable text selection */
         }
 
         nav ul {
@@ -98,29 +106,81 @@
             background-color: #5e9fc2;
         }
 
-        h1, h2, h3, h4, p {
-            margin: 0;
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #5e9fc2;
+            color: white;
+            border-top: 2px solid #5e9fc2;
         }
 
-        h1, h2 {
+        .social-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .social-links img {
+            width: 24px;
+            height: 24px;
+        }
+
+        h1, h2, h4 {
+            text-align: center;
+            margin: 0 0 15px;
+        }
+
+        /* Feature Projects Styling */
+        .responsive {
+            padding: 0 6px;
+            float: left;
+            width: 25%; /* Four items per row */
+            box-sizing: border-box;
+        }
+
+        @media only screen and (max-width: 700px) {
+            .responsive {
+                width: 50%; /* Two items per row for medium screens */
+            }
+        }
+
+        @media only screen and (max-width: 500px) {
+            .responsive {
+                width: 100%; /* One item per row for small screens */
+            }
+        }
+
+        .gallery {
+            border: 1px solid #ccc;
+            margin: 10px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+        }
+
+        .desc {
+            padding: 10px;
             text-align: center;
         }
 
-        /* Text Box Styling */
-        .textbox {
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            padding: 15px;
-            background-color: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin: 20px 0;
-            width: 80%;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
+        .clearfix:after {
+            content: "";
+            display: table;
+            clear: both;
         }
 
-        /* Button Styling */
+        /* Buttons Styling */
         .button {
             border: none;
             color: white;
@@ -144,31 +204,37 @@
             background-color: rgb(101, 173, 221);
             color: white;
         }
-
-        .button2 {
-            background-color: white;
-            color: black;
-            border: 2px solid #636363;
+                /* Image Popup */
+                .image-popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
         }
 
-        .button2:hover {
-            background-color: rgb(101, 173, 221);
-            color: white;
+        .image-popup img {
+            max-width: 90%;
+            max-height: 90%;
         }
 
-        /* Footer Styling */
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #5e9fc2;
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 30px;
             color: white;
-            border-top: 2px solid #5e9fc2;
+            font-size: 30px;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
-
-    <!-- Navigation Section -->
     <nav>
         <ul>
             <li><a style="text-decoration:none" href="index.html">Home</a></li>
