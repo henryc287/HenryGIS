@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // Disable right-click, text selection, and copying
+        document.addEventListener("contextmenu", function(event) {
+            event.preventDefault();
+        });
+
+        document.addEventListener("copy", function(event) {
+            event.preventDefault();
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            // Hide the popup on page load
+            document.getElementById("image-popup").style.display = "none"; 
+
+            const images = document.querySelectorAll(".gallery img");
+            images.forEach(img => {
+                img.addEventListener("click", function() {
+                    document.getElementById("popup-img").src = this.src;
+                    document.getElementById("image-popup").style.display = "block"; // Show the popup when image is clicked
+                });
+            });
+
+            document.getElementById("close-popup").addEventListener("click", function() {
+                document.getElementById("image-popup").style.display = "none"; // Close the popup
+            });
+        });
+    </script>
+    <title>Henry Chen</title>
+    <style>
+        /* General Styling */
+        body {
+            background-color: #F5F5F5;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            user-select: none; /* Disable text selection */
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: flex-start;
+            background-color: #5e9fc2;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+        }
+
+        nav ul li a:hover {
+            background-color: #5e9fc2;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropbtn {
+            background-color: #5e9fc2;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            text-decoration: none;
+            display: block;
+            padding: 10px 15px;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #5e9fc2;
+        }
+
+        h1, h2, h3, h4, p {
+            margin: 0;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        .textbox {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 15px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #5e9fc2;
+            color: white;
+            border-top: 2px solid #5e9fc2;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .social-links img {
+            width: 24px;
+            height: 24px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Section -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Education&Experience.html">Education & Experience</a></li>
+            <li class="dropdown">
+                <button class="dropbtn">GIS Portfolio</button>
+                <div class="dropdown-content">
+                    <a href="professional-projects.html">Professional Projects</a>
+                    <a href="academic-projects.html">Academic Projects</a>
+                    <a href="personal-projects.html">Personal Projects</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <hr class="rounded">
+
+    <!-- Home Section -->
+    <section id="home">
+        <h2>Henry Chen: Portfolio Geographic Information Science (GIS)</h2>
+    </section>
+
+    <div style="display: flex; align-items: center; justify-content: center; padding: 20px;">
+        <!-- Profile Photo -->
+        <img src="profilelinkedin.jpeg" alt="Henry Chen Profile Photo"
+             width="300" height="300" style="margin-right: 20px; border-radius: 50%;">
+
+        <!-- About Me Section -->
+         
+        <div class="textbox">
+            <section id="about">
+                <h2>About Henry</h2>
+                <p1>
+                    Hello, I'm Henry! Welcome to my website.
+                </p1>
+                <p>
+                    He graduated from Toronto Metropolitan University's Master of Spatial Analysis program, researching deep learning models for noise prediction (concepts).
+                </p>
+                <p>
+                    Here, he showcases some of his latest work in GIS, map-making, and spatial analysis. This platform allows him to share his passion and expertise in using spatial data to solve real-world problems.
+                </p>
+            </section>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <!-- Social -->
+        <div>
+            <h2>Let's connect! Here are my socials:</h2>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/hchensa/" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn Logo">
+                    LinkedIn
+                </a>
+            </div>
+        </div>
+
+        <!-- Contact -->
+        <div style="margin-top: 20px;">
+            <h2>Contact</h2>
+            <p>Located in Toronto, Canada</p>
+            <h4>Geographic Spatial Inquiries:</h4>
+            <p><a href="mailto:HENRYCHEN@TORONTOMU.CA" style="color: white; text-decoration: underline;">HENRYCHEN@TORONTOMU.CA</a></p>
+        </div>
+
+        <p style="margin-top: 20px;">© 2025 Henry Chen. All rights reserved.</p>
+    </footer>
+</body>
+</html>
