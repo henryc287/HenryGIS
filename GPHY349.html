@@ -4,13 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+        <script>
+        document.addEventListener("contextmenu", function(event) {
+            event.preventDefault();
+        });
+        document.addEventListener("copy", function(event) {
+            event.preventDefault();
+        });
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("image-popup").style.display = "none"; 
+            const images = document.querySelectorAll(".gallery img");
+            images.forEach(img => {
+                img.addEventListener("click", function() {
+                    document.getElementById("popup-img").src = this.src;
+                    document.getElementById("image-popup").style.display = "block"; 
+                });
+            });
+            document.getElementById("close-popup").addEventListener("click", function() {
+                document.getElementById("image-popup").style.display = "none"; 
+            });
+        });
+    </script>
     <title>Academic Projects</title>
     <style>
-        /* General Styling */
         body {
             background-color: #ECF0F1;
             margin: 0;
             font-family: Arial, sans-serif;
+            user-select: none; 
         }
 
         nav ul {
@@ -191,30 +212,21 @@
             </iframe>
         </center></p>
     </div>
-
-    <!-- Footer Section -->
     <footer>
-      <!-- Social -->
-      <div>
-          <h3>Let's connect! Here are my socials:</h3>
-          <div class="social-links">
-              <a href="https://www.linkedin.com/in/hchensa/" target="_blank">
-                  <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn Logo">
-                  LinkedIn
-              </a>
-          </div>
-      </div>
-
-      <!-- Contact -->
-      <div style="margin-top: 20px;">
-          <h3>Contact</h3>
-          <p>Located in Toronto, Canada</p>
-          <p><strong>Geographic Spatial Inquiries:</strong></p>
-          <p><a href="mailto:H14CHEN@TORONTOMU.CA" style="color: white; text-decoration: underline;">H14CHEN@TORONTOMU.CA</a></p>
-      </div>
-
-      <p style="margin-top: 20px;">© 2025 Henry Chen. All rights reserved.</p>
-  </footer>
-
+        <h3>Let's connect! Here are my socials:</h3>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/hchensa/" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn Logo">
+                LinkedIn
+            </a>
+        </div>
+        <div style="margin-top: 20px;">
+            <h3>Contact</h3>
+            <p>Toronto, Canada</p>
+            <p><a href="mailto:HENRYCHEN@TORONTOMU.CA" style="color: white; text-decoration: underline;">HENRYCHEN@TORONTOMU.CA</a></p>
+        </div>
+        <p style="margin-top: 20px;">© 2025 Henry Chen. All rights reserved.</p>
+    </footer>
 </body>
 </html>
+
