@@ -4,21 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-
     <script>
-        // Disable right-click, text selection, and copying
         document.addEventListener("contextmenu", function(event) {
             event.preventDefault();
         });
-
         document.addEventListener("copy", function(event) {
             event.preventDefault();
         });
-
         document.addEventListener("DOMContentLoaded", function() {
-            // Hide the popup on page load
             document.getElementById("image-popup").style.display = "none"; 
-
             const images = document.querySelectorAll(".gallery img");
             images.forEach(img => {
                 img.addEventListener("click", function() {
@@ -26,21 +20,18 @@
                     document.getElementById("image-popup").style.display = "block"; // Show the popup when image is clicked
                 });
             });
-
             document.getElementById("close-popup").addEventListener("click", function() {
                 document.getElementById("image-popup").style.display = "none"; // Close the popup
             });
         });
     </script>
-
     <title>Academic Projects</title>
     <style>
-        /* General Styling */
         body {
             background-color: #F5F5F5;
             margin: 0;
             font-family: Arial, sans-serif;
-            user-select: none; /* Disable text selection */
+            user-select: none; 
         }
 
         nav ul {
@@ -321,9 +312,6 @@
           <a href="GPHY242.html" class="button button1">GPHY242</a>
       </p>
   </section>
-
-  
-    <!-- Footer Section -->
     <footer>
         <h3>Let's connect! Here are my socials:</h3>
         <div class="social-links">
