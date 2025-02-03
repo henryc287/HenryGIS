@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Education & Experience</title>
+    <style>
+        /* General Styling */
+        body {
+            background-color: #F5F5F5;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: flex-start;
+            background-color: #5e9fc2;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+        }
+
+        nav ul li a:hover {
+            background-color: #5e9fc2;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropbtn {
+            background-color: #5e9fc2;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            text-decoration: none;
+            display: block;
+            padding: 10px 15px;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #5e9fc2;
+        }
+
+        h1, h2, h3, h4, p {
+            margin: 0;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        .textbox {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 15px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #5e9fc2;
+            color: white;
+            border-top: 2px solid #5e9fc2;
+        }
+
+        /* Gallery and Image Styling */
+        .responsive {
+            padding: 0 6px;
+            float: left;
+            width: 25%; /* Four items per row */
+            box-sizing: border-box;
+        }
+
+        @media only screen and (max-width: 700px) {
+            .responsive {
+                width: 50%; /* Two items per row for medium screens */
+            }
+        }
+
+        @media only screen and (max-width: 500px) {
+            .responsive {
+                width: 100%; /* One item per row for small screens */
+            }
+        }
+
+        .gallery {
+            border: 1px solid #ccc;
+            margin: 10px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+        }
+
+        .desc {
+            padding: 10px;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        .clearfix:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Section -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Education&Experience.html">Education & Experience</a></li>
+              
+            <!-- Drop down menu for GIS Portfolio-->
+            <div class="dropdown">
+                <button class="dropbtn">GIS Portfolio</button>
+                <div class="dropdown-content">
+                    <a href="professional-projects.html">Professional Projects</a>
+                    <a href="academic-projects.html">Academic Projects</a>
+                    <a href="personal-projects.html">Personal Projects</a>
+                </div>
+            </div>
+        </ul>
+    </nav>
+    <hr class="rounded">
+
+    <!-- Main Body -->
+    <h1><center>GPHY 242 - Remote Sensing of Environment</center></h1>
+    <div class="textbox">
+        <h2>Multispectral Sensor Project</h2>
+        <h4>Image Subsetting and Enhancement/Spectral Signatures and Band Comparisons</h4>
+        <!-- Image Grid -->
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="GPHY242_RemoteSensing/Forest & Bare Ground.PNG">
+                    <img src="GPHY242_RemoteSensing/Forest & Bare Ground.PNG" alt="Forest & Bare Ground" width="600" height="400">
+                </a>
+                <div class="desc">Contrast the red and near infrared channels</div>
+            </div>
+        </div>
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="GPHY242_RemoteSensing/Part 2 (2) A.PNG">
+                    <img src="GPHY242_RemoteSensing/Part 2 (2) A.PNG" alt="Red, Green, Blue" width="600" height="400">
+                </a>
+                <div class="desc">Normal colour composite</div>
+            </div>
+        </div>
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="GPHY242_RemoteSensing/Part 2 B.PNG">
+                    <img src="GPHY242_RemoteSensing/Part 2 B.PNG" alt="Colour infrared composite" width="600" height="400">
+                </a>
+                <div class="desc">(Colour infrared composite) NIR, Red, Green</div>
+            </div>
+        </div>
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="GPHY242_RemoteSensing/Part 2 C.PNG">
+                    <img src="GPHY242_RemoteSensing/Part 2 C.PNG" alt="Shortwave infrared composite" width="600" height="400">
+                </a>
+                <div class="desc">(Shortwave infrared composite) SWIR2,SWIR1,Green</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="clearfix"></div>
+
+<!-- Footer Section -->
+<footer>
+  <!-- Social -->
+  <div>
+      <h3>Let's connect! Here are my socials:</h3>
+      <div class="social-links">
+          <a href="https://www.linkedin.com/in/hchensa/" target="_blank">
+              <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn Logo" style="width: 30px; height: 30px; margin-right: 10px;">
+              LinkedIn
+          </a>
+      </div>
+  </div>
+
+  <!-- Contact -->
+  <div style="margin-top: 20px;">
+      <h3>Contact</h3>
+      <p>Located in Toronto, Canada</p>
+      <p><strong>Geographic Spatial Inquiries:</strong></p>
+      <p><a href="mailto:H14CHEN@TORONTOMU.CA" style="color: white; text-decoration: underline;">H14CHEN@TORONTOMU.CA</a></p>
+  </div>
+
+  <p style="margin-top: 20px;">© 2025 Henry Chen. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

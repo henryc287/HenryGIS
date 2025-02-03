@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        document.addEventListener("contextmenu", function(event) {
+          event.preventDefault();
+        });
+      </script>
+      <style>
+        body {
+          user-select: none; /* Disables text selection */
+        }
+      </style>
+      <script>
+        document.addEventListener("contextmenu", function(event) {
+          event.preventDefault();
+        });
+      
+        document.addEventListener("copy", function(event) {
+          event.preventDefault();
+        });
+      </script>
+      
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Henry Chen</title>
+    <style>
+        /* General Styling */
+        body {
+            background-color: #F5F5F5;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: flex-start;
+            background-color: #5e9fc2;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+        }
+
+        nav ul li a:hover {
+            background-color: #5e9fc2;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropbtn {
+            background-color: #5e9fc2;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            text-decoration: none;
+            display: block;
+            padding: 10px 15px;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #5e9fc2;
+        }
+
+        h1, h2, h3, h4, p {
+            margin: 0;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #5e9fc2;
+            color: white;
+            border-top: 2px solid #5e9fc2;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .social-links img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .section {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h3 {
+            margin-bottom: 10px;
+        }
+
+        .section p {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Section -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Education&Experience.html">Education & Experience</a></li>
+            <li class="dropdown">
+                <button class="dropbtn">GIS Portfolio</button>
+                <div class="dropdown-content">
+                    <a href="professional-projects.html">Professional Projects</a>
+                    <a href="academic-projects.html">Academic Projects</a>
+                    <a href="personal-projects.html">Personal Projects</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <hr class="rounded">
+
+<!-- Resume Section -->
+<h3 style="text-align: center;">Download My Resume and Cover Letter</h3>
+<div style="text-align: center;">
+    <a href="Henry Chen 2023 Resume.pdf" download>
+        <button style="background-color: #5e9fc2; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px;">
+            Download Resume
+        </button>
+    </a>
+    <a href="Henry Chen 2023 Cover Letter.pdf" download>
+        <button style="background-color: #5e9fc2; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px;">
+            Download Cover Letter
+        </button>
+    </a>
+</div>
+
+
+
+    <!-- Education Section -->
+    <h2 style="text-align: center;">Education</h2>
+    <div class="section">
+        <h3>Toronto Metropolitan University (Ryerson University)</h3>
+        <p>Master in Spatial Analysis</p>
+        <p><em>Sept. 2023 - Oct. 2024</em> | Toronto, Ontario</p>
+
+        <h3>Queen's University</h3>
+        <p>B.A. Honours in Geography</p>
+        <p><em>Sept. 2018 - June 2023</em> | Kingston, Ontario</p>
+        <p>Certificate in Urban Planning</p>
+        <p>Certificate in Geographic Spatial Science</p>
+
+        <h3>Bader International Study Center, Queen's University</h3>
+        <p>B.A. Honours</p>
+        <p><em>Sept. 2018 - June 2019</em> | Herstmonceux, United Kingdom</p>
+    </div>
+
+    <!-- Experience Section -->
+    <h2 style="text-align: center;">Experience</h2>
+    <div class="section">
+        <h3>Toronto Metropolitan University</h3>
+        <h4>Help Desk Specialist</h4>
+        <p>Helped students, staff, and alumni with computer and printer issues. Managed data tracking and inventory reporting. Worked on lab computer hardware and operating system issues, printer troubleshooting, and access card support (including Two-Factor Authentication).</p>
+
+        <h4>Teaching/Grading</h4>
+        <p>Grading and reviewing student coursework for introductory geography and GIS courses at the undergraduate level.</p>
+
+        <h4>Exam Invigilation</h4>
+        <p>Supervised undergraduate and graduate exams for the Department of Geography and Environmental Studies.</p>
+
+        <h3>Wild Fork Canada</h3>
+        <h4>Contracted GIS Analyst/Project Manager</h4>
+        <p>Worked on a project to create an interactive map of the Wild Fork River and its surrounding ecosystems.</p>
+    </div>
+
+    <!-- Skills Section -->
+    <h2 style="text-align: center;">Skills</h2>
+    <div class="section">
+        <p><b>GIS Software:</b> ESRI's ArcGIS Desktop, ArcGIS Online, ArcGIS Pro, ArcMap, ArcCatalog, QGIS, GoogleEarth, Google Earth Engine</p>
+        <p><b>GIS Skills:</b> Spatial Analysis, Cartography, Map Design, Database Management, Data Querying, Census Data Specialization</p>
+        <p>Model Building, Project Management, GIS Workflow, Geo-Referencing, Data Entry, Digitization, Vectorization</p>
+        <p><b>Event Coordination:</b> Event Planning, Community Engagement, Customer Service, Scheduling, Student Group Organization, Vendor Contacting</p>
+        <p><b>Imaging Processing:</b> Photographer, Videography, Gimbal Operation, Lidar, Drone Operation, Adobe Suite, Apple Final Cut Pro</p>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <!-- Social -->
+        <div>
+            <h3>Let's connect! Here are my socials:</h3>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/hchensa/" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn Logo">
+                    LinkedIn
+                </a>
+            </div>
+        </div>
+
+        <!-- Contact -->
+        <div style="margin-top: 20px;">
+            <h3>Contact</h3>
+            <p>Located in Toronto, Canada</p>
+            <p><strong>Geographic Spatial Inquiries:</strong></p>
+            <p><a href="mailto:H14CHEN@TORONTOMU.CA" style="color: white; text-decoration: underline;">H14CHEN@TORONTOMU.CA</a></p>
+        </div>
+
+        <p style="margin-top: 20px;">© 2025 Henry Chen. All rights reserved.</p>
+    </footer>
+</body>
+</html>
