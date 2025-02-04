@@ -5,19 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script>
-        // Disable right-click, text selection, and copying
         document.addEventListener("contextmenu", function(event) {
             event.preventDefault();
         });
-
         document.addEventListener("copy", function(event) {
             event.preventDefault();
         });
-
         document.addEventListener("DOMContentLoaded", function() {
-            // Hide the popup on page load
             document.getElementById("image-popup").style.display = "none"; 
-
             const images = document.querySelectorAll(".gallery img");
             images.forEach(img => {
                 img.addEventListener("click", function() {
@@ -25,7 +20,6 @@
                     document.getElementById("image-popup").style.display = "block"; // Show the popup when image is clicked
                 });
             });
-
             document.getElementById("close-popup").addEventListener("click", function() {
                 document.getElementById("image-popup").style.display = "none"; // Close the popup
             });
@@ -33,14 +27,12 @@
     </script>
     <title>Personal Projects</title>
     <style>
-        /* General Styling */
         body {
             background-color: #F5F5F5;
             margin: 0;
             font-family: Arial, sans-serif;
-            user-select: none; /* Disable text selection */
+            user-select: none; 
         }
-
         nav ul {
             list-style: none;
             padding: 0;
@@ -49,27 +41,22 @@
             justify-content: flex-start;
             background-color: #5e9fc2;
         }
-
         nav ul li {
             margin-right: 20px;
         }
-
         nav ul li a {
             color: white;
             text-decoration: none;
             padding: 10px 15px;
             display: block;
         }
-
         nav ul li a:hover {
             background-color: #5e9fc2;
         }
-
         .dropdown {
             position: relative;
             display: inline-block;
         }
-
         .dropbtn {
             background-color: #5e9fc2;
             color: white;
@@ -77,7 +64,6 @@
             border: none;
             cursor: pointer;
         }
-
         .dropdown-content {
             display: none;
             position: absolute;
@@ -85,7 +71,6 @@
             box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
             z-index: 1;
         }
-
         .dropdown-content a {
             color: black;
             text-decoration: none;
@@ -137,32 +122,27 @@
             text-align: center;
             margin: 0 0 15px;
         }
-
-        /* Feature Projects Styling */
         .responsive {
             padding: 0 6px;
             float: left;
-            width: 25%; /* Four items per row */
+            width: 25%; 
             box-sizing: border-box;
         }
-
         @media only screen and (max-width: 700px) {
             .responsive {
-                width: 50%; /* Two items per row for medium screens */
+                width: 50%; 
             }
         }
 
         @media only screen and (max-width: 500px) {
             .responsive {
-                width: 100%; /* One item per row for small screens */
+                width: 100%; 
             }
         }
-
         .gallery {
             border: 1px solid #ccc;
             margin: 10px;
         }
-
         .gallery img {
             width: 100%;
             height: auto;
@@ -178,7 +158,6 @@
             display: table;
             clear: both;
         }
-        /* Image Popup */
         .image-popup {
             display: none;
             position: fixed;
@@ -192,12 +171,10 @@
             justify-content: center;
             z-index: 1000;
         }
-
         .image-popup img {
             max-width: 90%;
             max-height: 90%;
         }
-
         .close-btn {
             position: absolute;
             top: 20px;
@@ -209,7 +186,6 @@
     </style>
 </head>
 <body>
-    <!-- Navigation Section -->
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -225,19 +201,13 @@
         </ul>
     </nav>
     <hr class="rounded">
-
-        <!-- Image Popup -->
         <div id="image-popup" class="image-popup">
             <span id="close-popup" class="close-btn">&times;</span>
             <img id="popup-img" src="" alt="Popup Image">
         </div>
-
-    <!-- Page Content -->
     <h1>GIS Personal Projects</h1>
     <h4>A Showcase of My Personal GIS Projects</h4>
-
     <h2>Feature Projects</h2>
-
     <div class="feature-projects">
         <div class="responsive">
             <div class="gallery">
@@ -245,7 +215,6 @@
                 <div class="desc">Map of L10 (Noise Level exceeded for 10% of the time measurement duration) for Machine Learning</div>
             </div>
         </div>
-
     <div class="feature-projects">
         <div class="responsive">
             <div class="gallery">
@@ -253,7 +222,6 @@
                 <div class="desc">Map of LDEN (Noise exposure over a 24 hour period) for Machine Learning</div>
             </div>
         </div>
-
         <div class="feature-projects">
         <div class="responsive">
             <div class="gallery">
@@ -261,25 +229,22 @@
                 <div class="desc">Geocoded location of sensor with buffer zone for study area</div>
             </div>
         </div>
-
         <div class="clearfix"></div>
     </div> 
-    
-
-    <!-- Footer Section -->
     <footer>
-        <h3>Let's connect! Here are my socials:</h3>
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/hchensa/" target="_blank">
-                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn Logo">
-                LinkedIn
-            </a>
+        <div>
+            <h2>Let's connect! Here are my socials:</h2>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/hchensa/" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn Logo">
+                    LinkedIn
+                </a>
+            </div>
         </div>
         <div style="margin-top: 20px;">
             <h3>Contact</h3>
-            <p>Toronto, Canada</p>
-            
             <p><a href="mailto:HENRYCHEN@TORONTOMU.CA" style="color: white; text-decoration: underline;">HENRYCHEN@TORONTOMU.CA</a></p>
+            <p>Toronto, Canada</p>
         </div>
         <p style="margin-top: 20px;">© 2025 Henry Chen. All rights reserved.</p>
     </footer>
